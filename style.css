@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root{
+  --background-color: #eaebef;
+  --bagkground-nav: #f6f8fa;
+  --link-color: #303440;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav{
+  width: 300px;
+}
+
+.nav-link{
+  color: var(--link-color);
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+}
+.nav-link-inside{
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+.nav-link-inside:hover {
+  background-color: var(--bagkground-nav);
+}
+
+.list{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 16px 16px 0;
+  background-color: white;
+}
+
+.list-item{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list-item-click{
+  cursor: pointer;
+}
+
+.list-button{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 70%;
+  margin: 0 auto;
+}
+.arrow .list-arrow{
+  transform: rotate(90deg);
+}
+.list-arrow {
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.list-show{
+  width: 80%;
+  margin-left: auto;
+  border-left: 2px solid var(--link-color) ;
+  list-style: none;
+  transition: height 0.5s;
+  height: 0;
+}
