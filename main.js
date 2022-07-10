@@ -1,17 +1,14 @@
-let listElements = document.querySelectorAll('.click');
+let listElements = document.querySelectorAll('.button-click');
+listElements.forEach((listElement) => {
+  listElement.addEventListener('click', () =>{
+    listElement.classList.toggle('arrow');
 
-listElements.forEach(listElements => {
-  listElements.addEventListener('click', () => {
-    
-    listElements.classList.toggle('arrow');
-
-    let height = 0;
-    let menu = listElements.nextElementSibling;
-    console.log(menu.scrollHeight) 
-    if(menu.clientHeight == "0") {
-      height = menu.scrollHeight;
+    let altura = 0;
+    let submenu = listElement.nextElementSibling;
+    if(submenu.clientHeight === 0){
+      altura = submenu.scrollHeight;
     }
 
-    menu.style.height = `${height}px`;
+    submenu.style.height = `${altura}px`;
   })
 })

@@ -1,82 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 :root{
-  --background-color: #eaebef;
-  --bagkground-nav: #f6f8fa;
+  --background-color: #f2f2f2;
   --link-color: #303440;
+  --background-hover: #F6F8FA;
 }
 
-*{
+* {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
 }
 
-body{
+body {
   background-color: var(--background-color);
-  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-family: 'Poppins';
 }
 
-.nav{
-  width: 300px;
+.nav {
+  width: 	300px;
 }
 
-.nav-link{
-  color: var(--link-color);
-  display: block;
-  padding: 15px 0;
-  text-decoration: none;
-}
-.nav-link-inside{
-  border-radius: 6px;
-  padding-left: 20px;
-  text-align: left;
-}
-.nav-link-inside:hover {
-  background-color: var(--bagkground-nav);
-}
-
-.list{
+.menu{
   width: 100%;
   height: 100vh;
+  background-color: white;
+  border-radius: 0 18px 18px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0 16px 16px 0;
-  background-color: white;
+  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 30%);
 }
 
-.list-item{
-  list-style: none;
+.menu-item {
   width: 100%;
+  list-style: none;
   text-align: center;
   overflow: hidden;
 }
 
-.list-item-click{
-  cursor: pointer;
+.menu-link {
+  text-decoration: none;
+  color: var(--link-color);
+  display: block;
+  padding: 10px 0;
+}
+.menu-link-insite:hover{
+  background-color: var(--background-hover);
 }
 
-.list-button{
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  width: 70%;
-  margin: 0 auto;
+.list-arrow{
+  margin-left: auto;
+  transition: transform 0.5s;
 }
 .arrow .list-arrow{
   transform: rotate(90deg);
 }
-.list-arrow {
-  margin-left: auto;
-  transition: transform 0.3s;
+
+.container-button {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin: 0 auto;
+}
+.menu-link-insite {
+  padding-left: 20px;
+  text-align: left;
+}
+.menu-item-click {
+  cursor: pointer;
 }
 
-.list-show{
+.submenu {
   width: 80%;
-  margin-left: auto;
-  border-left: 2px solid var(--link-color) ;
   list-style: none;
-  transition: height 0.5s;
+  border-left: 2px solid var(--link-color);
+  margin-left: auto;
   height: 0;
+  transition: height 0.5s;
 }
